@@ -10,7 +10,14 @@ const initialState = {
   },
   users: {
   },
-  newMessage: ''
+  restaurants: {
+
+  },
+  newMessage: '',
+  newRestaurant: '',
+  restaurant: {
+  
+  }
 };
 
 export default initialState;

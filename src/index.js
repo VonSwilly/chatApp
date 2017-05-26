@@ -11,6 +11,7 @@ import './index.css';
 import { startListeningToAuthChanges } from './actions/auth';
 import { startListeningForUsers } from './actions/users';
 import { startListeningForMessages } from './actions/messages';
+import {startListeningForRestaurants } from './actions/restaurants';
 import { messaging } from './firebase';
 
 const middleware = [ thunk ];
@@ -29,6 +30,7 @@ const store = createStore(
 store.dispatch(startListeningToAuthChanges());
 store.dispatch(startListeningForUsers());
 store.dispatch(startListeningForMessages());
+store.dispatch(startListeningForRestaurants());
 
 
 ReactDOM.render(

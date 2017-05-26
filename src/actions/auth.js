@@ -48,5 +48,5 @@ export const startListeningToAuthChanges = () => {
         dispatch(signedOut());
       }
     });
-  }
+  };
 };

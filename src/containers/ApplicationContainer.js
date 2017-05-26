@@ -3,8 +3,11 @@ import Application from '../components/Application';
 import { signIn, signOut } from '../actions/auth';
 
 
-const mapStateToProps = ({ auth }) => {
-  return { auth: auth };
+const mapStateToProps = ({ auth, restaurants }) => {
+  return {
+    auth: auth,
+    restaurants:restaurants
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
