@@ -6,6 +6,7 @@ export const NewRestaurant = ({ newRestaurant, handleSubmit, handleChange }) => 
     className="NewRestaurant"
     onSubmit={(event) => handleSubmit(event, newRestaurant)}
   >
+    <h3>Enter Restaurants Here</h3>
     <input
       type="text"
       value={newRestaurant}

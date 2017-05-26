@@ -14,10 +14,12 @@ class Restaurant extends Component {
             return <li key={key}>{voter}</li>;
           })}
         </ul>
+
         {
+          user.displayName ?
           userHasSelected
             ? <button className="destructive"  onClick={handleDeselect}> Actually, nope</button>
-            : <button onClick={handleSelect}>Yep, I am in</button>
+            : <button onClick={handleSelect}>Yep, I am in</button> : <p>You must be signed in to vote</p>
         }
       </article>
     );

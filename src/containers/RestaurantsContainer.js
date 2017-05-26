@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Restaurants from '../components/Restaurants';
-import { upVote } from '../actions/restaurants';
+import { upVote, downVote } from '../actions/restaurants';
 
 
 const mapStateToProps = ({ restaurants, auth }) => {
@@ -11,10 +11,10 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		handleSelect(key, {auth}) {
 			dispatch(upVote(key, {auth}));
+		},
+		handleDeselect(key, {auth}) {
+			dispatch(downVote(key, {auth}));
 		}
-		// handleDeselect(key) {
-		// 	return () => dispatch(handleDeselect(key, auth));
-		// }
 	};
 };
 

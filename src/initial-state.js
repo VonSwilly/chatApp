@@ -15,9 +15,6 @@ const initialState = {
   },
   newMessage: '',
   newRestaurant: '',
-  restaurant: {
-  
-  }
 };
 
 export default initialState;

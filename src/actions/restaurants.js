@@ -33,16 +33,28 @@ export const updateRestaurant = (key, restaurant) => {
 
 export const upVote = (key, {auth}) => {
 	return (dispatch) => {
-		console.log("auth1111", auth, key);
 		restaurantsRef.child(key)
 			.child('votes')
 			.child(auth.uid)
 			.set(auth.displayName).then(() => {
 				restaurantsRef.child(key).on('value', (snapshot) => {
 					const val = snapshot.val();
-					console.log("SNAP", val);
 					dispatch(updateRestaurant(key, val));
 				});
+		});
+	};
+};
+
+export const downVote = (key, {auth}) => {
+	return (dispatch) => {
+		restaurantsRef.child(key)
+			.child('votes')
+			.child(auth.uid)
+			.remove().then(() => {
+			restaurantsRef.child(key).on('value', (snapshot) => {
+				const val = snapshot.val();
+				dispatch(updateRestaurant(key, val));
+			});
 		});
 	};
 };

@@ -12,7 +12,7 @@ export const Restaurants = ({restaurants, auth, handleSelect, handleDeselect}) =
 					{...restaurant}
 					user={auth}
 					handleSelect={() => handleSelect(key, {auth})}
-					handleDeselect={() => handleDeselect(key)}
+					handleDeselect={() => handleDeselect(key, {auth})}
 				/>;
 			})}
 	</section>

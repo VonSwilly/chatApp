@@ -3,6 +3,7 @@ import MessagesContainer from '../containers/MessagesContainer';
 import NewMessageContainer from '../containers/NewMessageContainer';
 import NewRestaurant from '../containers/NewRestaurantsContainer';
 import Restaurants from "../containers/RestaurantsContainer";
+import Header from './Header';
 import SignIn from './SignIn';
 import CurrentUser from './CurrentUser';
 import Loading from './Loading';
@@ -13,14 +14,15 @@ import './Application.css';
 const Application = ({ auth, signIn, signOut}) => {
   return (
     <main className="Application">
+      <Header/>
       <div className="Application--sidebar">
         { auth.status === 'ANONYMOUS' && <SignIn signIn={signIn}/> }
         { auth.status === 'SIGNED_IN' && <CurrentUser auth={auth} signOut={signOut} />}
-        { auth.status === 'SIGNED_IN' && <NewMessageContainer /> }
         { auth.status === 'AWAITING_AUTH_RESPONSE' && <Loading /> }
       </div>
       <NewRestaurant/>
       <Restaurants/>
+      { auth.status === 'SIGNED_IN' && <NewMessageContainer /> }
       <MessagesContainer />
     </main>
   );
