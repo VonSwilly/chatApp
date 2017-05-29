@@ -1,6 +1,7 @@
 .NewRestaurant {
   clear: both;
+  float: left;
   margin: 1em;
-  width:30vw;
+  width:30%;
   padding-top: 3em;
 }

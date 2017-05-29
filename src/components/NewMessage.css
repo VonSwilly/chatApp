@@ -1,4 +1,7 @@
 .NewMessage {
-  margin-bottom: 1em;
+  clear: both;
+  margin: 3em 0;
+  float: left;
+  padding: 3em 0;
   width:30vw;
 }

@@ -1,5 +1,8 @@
 .Restaurants {
+  width:65%;
+  float: right;
   display: flex;
+  margin-top: 4em;
   flex-wrap: wrap;
   justify-content: center;
 }

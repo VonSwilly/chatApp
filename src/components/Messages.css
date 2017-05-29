@@ -1,3 +1,6 @@
 .Messages {
   flex: 1;
+  float: right;
+  width:65%;
+  margin-top:10em;
 }

@@ -5,6 +5,7 @@ const NewMessage = ({ newMessage, auth, handleChange, handleSubmit }) => (
   <form
     className="NewMessage"
     onSubmit={(event) => handleSubmit(event, newMessage, auth.uid) }>
+    <h2>Have a chat here...</h2>
     <label>
       <input
         className="NewMessage--content"
